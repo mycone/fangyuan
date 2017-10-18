@@ -1,0 +1,37 @@
+actor: Tester
+paths:
+    tests: app/tests
+    log: app/tests/_output
+    data: app/tests/_data
+    helpers: app/tests/_support
+settings:
+    bootstrap: _bootstrap.php
+    memory_limit: 1024M
+    colors: true
+modules:
+    config:
+        Yii2:
+            configFile: 'app/config/test.php'
+            cleanup: false
+
+# To enable code coverage:
+#coverage:
+#    #c3_url: http://localhost:8080/index-test.php/
+#    enabled: true
+#    #remote: true
+#    #remote_config: '../tests/codeception.yml'
+#    whitelist:
+#        include:
+#            - app/models/*
+#            - app/controllers/*
+#            - app/commands/*
+#            - app/mail/*
+#    blacklist:
+#        include:
+#            - app/assets/*
+#            - app/config/*
+#            - app/runtime/*
+#            - vendor/*
+#            - app/views/*
+#            - web/*
+#            - app/tests/*
